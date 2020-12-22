@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<div *ngIf="correct >= 2;else blockelse">
+  <img src="../../../assets/img/trophy.jpg">
+  <span class="msg">Hurrah! You made it</span>
+</div>
+<ng-template #blockelse>
+  <img src="../../../assets/img/sad.jpg">
+  <span class="msg">Try better next time</span>
+</ng-template>
+<h1>Your Score : {{correct}}</h1>
+
+<div class="row container">
+  <div class="col s12 m6">
+    <div class="card indigo darken-4" *ngFor="let a of answer;index as i">
+      <div class="card-content white-text">
+        <span class="card-title">Question {{ i+1 }}</span>
+        <p id="question">{{a.QuestionStatement}} ?</p>
+      </div>
+      <div class="card-action">
+        <ul class="collection">
+          <li class="collection-item" >{{a.Option1}}<span class="correct" *ngIf="answer[i].selectedOption==a.Option1 && answer[i].selectedOption==answer[i].Answers">correct</span><span class="incorrect" *ngIf="answer[i].selectedOption==a.Option1 && answer[i].selectedOption != answer[i].Answers">Incorrect</span></li>
+          <li class="collection-item" >{{a.Option2}}<span class="correct" *ngIf="answer[i].selectedOption==a.Option2 && answer[i].selectedOption==answer[i].Answers">correct</span><span class="incorrect" *ngIf="answer[i].selectedOption==a.Option2 && answer[i].selectedOption != answer[i].Answers">Incorrect</span></li>
+          <li class="collection-item" >{{a.Option3}}<span class="correct" *ngIf="answer[i].selectedOption==a.Option3 && answer[i].selectedOption==answer[i].Answers">correct</span><span class="incorrect" *ngIf="answer[i].selectedOption==a.Option3 && answer[i].selectedOption != answer[i].Answers">Incorrect</span></li>
+          <li class="collection-item" >{{a.Option4}}<span class="correct" *ngIf="answer[i].selectedOption==a.Option4 && answer[i].selectedOption==answer[i].Answers">correct</span><span class="incorrect" *ngIf="answer[i].selectedOption==a.Option4 && answer[i].selectedOption != answer[i].Answers">Incorrect</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h1>Correct Answers</h1>
+<ul class="collection container" *ngFor="let a of answer;index as i">
+  <li class="collection-item">{{i+1}} . {{a.Answers}} </li>
+</ul>
+

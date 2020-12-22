@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<div class="container time-left">
+    <span class="leader">Total Time : </span>
+    <span class="scoreboard">
+      0:<span *ngIf="timeLeft<10">0</span>{{ timeLeft }}
+    </span>
+  </div>
+
+<div class="row container">
+<div class="col s12 m6">
+  <div class="card  cyan darken-4">
+    <div class="card-content white-text">
+      <span class="card-title" *ngIf="index+1 <= totalQuestions">Question {{ index+1 }} of {{ totalQuestions }}</span>
+      <p id="question">{{questions[index].QuestionStatement}}?</p>
+    </div>
+    <div class="card-action">
+      <ul class="collection">
+        <li class="collection-item" (click)="isCorrect(questions[index].id,questions[index].Option1)">{{questions[index].Option1}}</li>
+        <li class="collection-item" (click)="isCorrect(questions[index].id,questions[index].Option2)">{{questions[index].Option2}}</li>
+        <li class="collection-item" (click)="isCorrect(questions[index].id,questions[index].Option3)">{{questions[index].Option3}}</li>
+        <li class="collection-item" (click)="isCorrect(questions[index].id,questions[index].Option4)">{{questions[index].Option4}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+<section class="paging">
+<div class="nextQuestionNav">
+    <button class="btn waves-effect waves-light light-blue accent-1" type="submit" name="action" (click)="navigateToNextQuestion()" [disabled]="index>=totalQuestions">Next
+      <i class="material-icons right">send</i>
+    </button>
+          
+</div>
+<div class="showScoreNav">
+  <button class="btn waves-effect waves-light light-blue accent-1" type="submit" name="action" (click)="navigateToResult()">Submit
+  </button>
+</div>
+</section>
+<section class="progress-bar container">
+<!-- <ngb-progressbar type="success" [striped]="true" [animated]="true" [value]="progressValue">
+  <strong>{{ progressValue }}%</strong>
+</ngb-progressbar> -->
+  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ progressValue }}%</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

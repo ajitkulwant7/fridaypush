@@ -1,0 +1,36 @@
+<button class="btnBack" (click)="backToHome()">BACK</button>
+<h1>Welcome {{username}} </h1>
+<button mat-button class="menu-button" (click)="sidenav.toggle()">
+  <mat-icon>{{ isMenuOpen ? "menu_open" : "menu" }}</mat-icon>
+</button>
+
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #sidenav
+    autoFocus="false"
+    mode="push"
+    [(opened)]="isMenuOpen"
+    class="sidenav"
+    (click)="onSidenavClick()"
+  >
+    <button mat-stroked-button color="accent">
+      <a routerLink="/userFavourite" >Favourites</a>
+    </button>
+    <br />
+    <button mat-stroked-button color="accent">
+      <a routerLink="/userQuiz">Quiz</a></button
+    ><br />
+    <button mat-stroked-button color="accent">
+      <a routerLink="/userGame">Games</a></button
+    ><br />
+
+    <!-- <a mat-button routerLink="/userQuiz">Quiz</a>
+    <a mat-button routerLink="/userGame">Games</a> -->
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

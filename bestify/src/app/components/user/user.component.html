@@ -1,0 +1,14 @@
+<p>user works!</p>
+
+<ul>
+  <li *ngFor="let user of users">
+    {{ user.username }}
+  </li>
+</ul>
+
+<button (click)="addUser()">Add</button>
+
+
+Enter text: <input ng-model ="Name">
+{{Name}}
+

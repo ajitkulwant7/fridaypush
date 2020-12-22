@@ -1,0 +1,52 @@
+
+ .footer{
+     background-color: #673ab7;
+     position: relative;
+     bottom: 0;
+ 
+     align-items: center;
+   
+ }
+ @media only screen and (max-width: 600px) {
+   .footer{
+    position: relative;
+    bottom: 0;
+   }
+  }
+ footer a i{
+     margin: auto;
+ }
+ a{
+    height: 100px;
+    width: 100px;
+  
+}
+a i{
+   transition: all 0.3s linear;
+   padding: 9px;
+   position: relative;
+   left:43%;
+}
+a.hover i{
+    transform: scale(1.4);
+}
+.fa-facebook{
+    color:#e84393;
+}
+.fa-instagram{
+    color: #e84393;;
+}
+.fa-youtube{
+    color: #e84118;
+}
+.fa-twitter-square{
+    color: #0097e6;
+}
+.side
+{
+    font-weight:bolder;
+    padding:6px ;
+    text-align: center;
+   color: white;
+ 
+}

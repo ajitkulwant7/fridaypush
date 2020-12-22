@@ -1,0 +1,56 @@
+table {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-width: 500px;
+    
+}
+
+th.mat-header-cell,td.mat-cell {
+    text-align: center;
+    max-width: 30em;
+    
+}
+
+th.mat-header-cell{
+    background-color: rgb(15, 2, 2);
+    color: blanchedalmond;
+}
+
+td button{
+    :hover{        
+        transform: scale(1.75);       
+  }
+}
+.classFav{
+    background-color: rgb(245, 223, 223);
+}
+
+// for mobiles
+@media only screen and (max-width: 768px) {
+   table{
+    transform: scale(0.75);    
+    h2{
+        font-size: small;
+    }  
+    
+th.mat-header-cell{
+    background-color: rgb(124, 0, 0);
+    color: rgb(252, 242, 227);
+} 
+}
+  } 
+
+  
+// for laptops
+@media only screen and (min-width: 1024px) {
+    table{
+        transform: scale(1);       
+    }
+       
+th.mat-header-cell{
+    background-color: rgb(83, 16, 145);
+    color: rgb(252, 242, 227);
+} 
+  } 
+ 

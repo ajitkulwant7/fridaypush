@@ -1,0 +1,85 @@
+mat-sidenav-container{
+    height: 55em;
+    background-color: rgb(136, 215, 247);
+    
+}
+
+mat-sidenav{
+    padding: 16px;
+    // background-color: cornflowerblue;
+}
+mat-sidenav-content{
+   background-color: rgb(223, 236, 252);
+        }
+
+mat-sidenav a{
+    display: block;
+    padding: 20px;
+}h1{
+    text-align: center;
+    text-transform: capitalize;
+}
+a{
+    text-decoration: none;
+}
+button{
+    
+    border: none;
+    color: darkslateblue;
+    width: 10em;
+    :hover{
+        
+        transform: scale(1.75);       
+    }
+}
+
+.btnBack{
+    border-radius: 5em;
+    margin: 5px;
+    padding: 5px;
+    float: right;
+    font-weight: bolder;
+    
+}
+
+
+// for mobiles
+@media only screen and (max-width: 768px) {
+    button{
+        width: 9em;
+        :hover{
+            transform: scale(1.5);               
+        }
+    }
+    a{
+        margin: 2px;
+        color: tomato;
+        padding: 5px;
+    }
+    mat-sidenav-container{
+        height: 45em;
+        background-color: rgb(188, 136, 247);
+        
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    button{
+        width: 12em;
+        :hover{
+            transform: scale(2);               
+        }
+    }
+    a{
+        margin: 2px;
+        color: violet;
+        padding: 5px;
+    }
+
+    mat-sidenav-container{
+        height: 65em;
+        background-color: rgb(247, 136, 136);
+        
+    }
+  }

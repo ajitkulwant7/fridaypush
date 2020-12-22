@@ -1,0 +1,57 @@
+// a{
+//     text-align: center;
+//    font-size: 30px;
+//    text-decoration: none;
+// }
+// a:hover{
+//     border-bottom: 4px solid crimson;
+// }
+
+// .container {
+//   background-image: url("../../../assets/img/quizzzzz.jpg");
+// }
+
+h4 {
+  text-align: center;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+}
+//   }
+button {
+  margin: auto;
+  display: block;
+}
+
+// .example-card {
+//   max-width: 400px;
+// }
+
+// .example-header-image {
+//   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+//   background-size:auto;
+// }
+@media (max-width: 576px) {
+  button {
+   width: 50px;
+   height:40px;
+   font-size: small;
+   padding: 0;
+  }
+  }
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+  button {
+    width: 50px;
+    height:40px;
+    font-size: small;
+    padding: 0;
+   }
+  }
+
+// Large devices (desktops, 992px and up)
+
+

@@ -1,0 +1,21 @@
+<div [class.my-alternate-theme]="isThemeChange">
+  <app-header
+    (myevent)="updateTheme($event)"
+    (userprofileclicked)="changeview($event)"
+    (adminpage)="adminview($event)"
+    (isContactUs)="contactus($event)"
+  ></app-header>
+  
+
+  <app-home
+  *ngIf="!isprofileclicked"
+  [ngClass]="{ 'admin-class': adminpage }"
+  [contactUs]="contactUs"
+></app-home>
+
+<app-admin *ngIf="adminpage"></app-admin>
+<app-user-sidenav *ngIf="isprofileclicked"></app-user-sidenav>
+
+<!-- <app-highscore></app-highscore> -->
+<!-- <app-footer></app-footer> -->
+</div>

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css');
+.nextQuestionNav button{
+  font-weight: 800;
+  margin-top: 5%;
+  margin-left: 20%;
+}
+.showScoreNav button{
+  font-weight: 800;
+  position: relative;
+  top:-32px;
+  margin-left: 60%;
+}
+.determinate{
+  height:80px;
+}
+.selected{
+  background-color:#00b8e6;
+}
+li{
+  cursor: pointer;
+}
+li:hover{
+  background-color: #4db6ac ;
+}
+.container{
+  margin: auto;
+}
+.leader{
+  font-size: 30px;
+  color: #d81b60;
+}
+.scoreboard{
+  font-size: 30px;
+}
+.time-left{
+  margin-left: 70%;
+}
+.card-title{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 25px;
+  color: yellow;
+}
+#question{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 24px;
+}
+.progress-bar{
+  background-color: #006064;
+}

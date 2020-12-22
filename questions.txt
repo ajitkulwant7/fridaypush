@@ -1,0 +1,71 @@
+
+insert into questions values(2,"Which of the following personalities gave ‘The Laws of Heredity?",2,"Robert Hook",
+"G.J. Mendel","Charles Darwin","William Harvey",1,"G.J. Mendel");
+
+insert into questions values(3,"Name the person who was also known as Deshbandhu",2,"S. Radhakrishnan",
+"G.K. Gokhale","Chittaranjan Das","Madan Mohan Malviya",1,"Chittaranjan Das");
+
+insert into questions values(4,"Which of the following is NOT the language enshrined in the eighth schedule of the Indian Constitution, as the language of the state?",3,"Nepali","Kashmiri","English","Konkani",1,"English");
+
+insert into questions values(5," The capital of Uttarakhand is…. ",4," Masoorie","Dehra Dun","Nainital","None of these",1,"Dehra Dun");
+
+
+insert into questions values(6," Geet Govind is a famous creation of …… ",4,"Bana Bhatt","Kalidas","Jayadev","Bharat Muni",1,"Jayadev");
+
+insert into questions values(7," According to the Constitution of India, which of the following is NOT one of the main organs of the Government? ",4,"Legislature", "Bureaucracy","Executive","Judiciary",1," Bureaucracy");
+
+
+insert into questions values(8," Panchayati Raj comes under….",4,"Residual list", "Concurrent list","State list","Union list",1," State list");
+
+
+
+
+
+
+
+insert into questions values(10," Which of the amendments of the following constitution was responsible for deleting the right to property from the list of fundamentals rights?",1,"43rd amendment", "44rd amendment","48rd amendment","45rd amendment",1," 44rd amendment");
+
+
+insert into questions values(11," Harshcharita and KadamBari are the works of…..",1," Kalhan", "Panini","Bana Bhattat","Patanjali",1," Bana Bhatta");
+
+
+insert into questions values(12," Panini was……",1,"a Greek philosopher", "Panini","an Indian astronomer and famous mathematician"," a Sanskrit grammarian of Vedic times
+i",1," a Sanskrit grammarian of Vedic times");
+
+
+insert into questions values(13,"Mein Kampf is authored by…",1,"Napoleon Bonaparte", " Karl Marx","Adolf Hitler","Benito Mussolini",1," Adolf Hitler");
+
+insert into questions values(14," Which of the following is the largest and the deepest ocean of the world?",1,"Arctic", " Atlantic","Pacific"," Indian
+",1," Pacific");
+
+
+insert into questions values(15,"Which Indian state has the least literacy rate?",1,"Bihar", " Rajasthan","Arunachal Pradesh","Orissa",1," Bihar");
+
+insert into questions values(16," Which of the following is not a member of the European Union?",1,"Greece", " Finland","Norway
+","United Kingdom",1," Norway
+");
+
+
+
+
+insert into questions values(17,"Name the person who was also known as Deshbandhu",1,"S. Radhakrishnan",
+"G.K. Gokhale","Chittaranjan Das","Madan Mohan Malviya",1,"Chittaranjan Das");
+
+insert into questions values(18,"Which of the following is NOT the language enshrined in the eighth schedule of the Indian Constitution, as the language of the state?",1,"Nepali","Kashmiri","English","Konkani",1,"English");
+
+insert into questions values(19," The capital of Uttarakhand is…. ",1," Masoorie","Dehra Dun","Nainital","None of these",1,"Dehra Dun");
+
+
+insert into questions values(20," Geet Govind is a famous creation of …… ",1,"Bana Bhatt","Kalidas","Jayadev","Bharat Muni",1,"Jayadev");
+
+insert into questions values(21," According to the Constitution of India, which of the following is NOT one of the main organs of the Government? ",1,"Legislature", "Bureaucracy","Executive","Judiciary",1," Bureaucracy");
+
+
+insert into questions values(22," Panchayati Raj comes under….",1,"Residual list", "Concurrent list","State list","Union list",1," State list");
+
+
+insert into questions values(23,"Which of the following personalities gave ‘The Laws of Heredity?",1,"Robert Hook",
+"G.J. Mendel","Charles Darwin","William Harvey",1,"G.J. Mendel");
+
+
+

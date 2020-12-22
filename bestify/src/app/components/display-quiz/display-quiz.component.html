@@ -1,0 +1,41 @@
+<!-- <!DOCTYPE html>
+<ol *ngFor="let q of quizList">
+    <li><a routerLink="Quiz/{{q.id}}">{{q.quizname}}</a></li>
+</ol> -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <ul *ngFor="let q of quizList">
+      <div class="column">
+        <div class="row">
+          <div class="card" style="width: 400px">
+            <h4 class="card-title">{{ q.quizname }}</h4>
+            <img
+              class="card-img-top"
+              src="../../../assets/img/quizpic.jpg"
+              alt="Card image"
+              style="width: 100%"
+            />
+            <div class="card-body">
+              <button
+                type="button"
+                class="btn btn-dark"
+                routerLink="Quiz/{{ q.id }}"
+              >
+                Attempt Quiz
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </div>
+</body>

@@ -1,0 +1,58 @@
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+.main-dash {
+  background: white;
+}
+.cards1 {
+  border-radius: 0.5em;
+  box-shadow: -12px -12px 12px 0 rgb(255, 255, 255, 1),
+    12px 12px 12px 0 rgba(0, 0, 0, 0.03);
+}
+.buttonsforNav {
+  float: right;
+}
+.cardscontainer {
+  background: #eeeeee;
+  h2 {
+    text-align: center;
+  }
+}
+.quizSection {
+  background: #eeeeee;
+  input[type="submit"] {
+    background-color: #f4d03f;
+    color: black;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 2px;
+  }
+  button {
+    background-color: blueviolet;
+    color: white;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 1px;
+  }
+}
+.addQuiz {
+  padding: 20px;
+  margin: 40px;
+}
+.deleteQuiz {
+  padding: 20px;
+  margin: 40px;
+}
+.deleteQuizTab {
+  text-align: center;
+
+
+  tr ,td,th{
+    border: 1px solid black;
+    border-radius:5px;
+  }
+}

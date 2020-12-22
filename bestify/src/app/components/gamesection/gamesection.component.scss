@@ -1,0 +1,215 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(https://fonts.googleapis.com/css?family=Teko:700);
+.gamesection {
+  height: 100vh;
+  min-height: 100vh;
+  padding-top: 50px;
+  background-color:  #161623;
+  .background {
+    background-color:  #161623;
+    margin: auto;
+  }
+}
+
+.gamezone {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  .imgcontainer {
+    img {
+      border-radius: 50%;
+      width: 50%;
+    }
+  }
+  .heading {
+    h3 {
+      color: white;
+    }
+  }
+}
+
+#mainContent {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  flex-wrap: wrap;
+  button {
+    border-radius: 5px;
+    background-color: blueviolet;
+    color: wheat;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #mainContent {
+    flex-direction: column;
+  }
+}
+.gameCard {
+  background-color: #fff;
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  margin: 5px 5px;
+  // margin-left: 6%;
+  max-width: 350px;
+  min-width: 200px;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.gameCard *,
+.gameCard *:before,
+.gameCard *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+
+.gameCard img {
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+.gameCard:before,
+.gameCard:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  background-color: dodgerblue;
+  opacity: 0.5;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+
+.gameCard:before {
+  -webkit-transform: skew(30deg) translateX(-80%);
+  transform: skew(30deg) translateX(-80%);
+}
+
+.gameCard:after {
+  -webkit-transform: skew(-30deg) translateX(-70%);
+  transform: skew(-30deg) translateX(-70%);
+}
+
+.gameCard figcaption {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  bottom: 0;
+  padding: 25px 40% 25px 20px;
+}
+
+.gameCard figcaption:before,
+.gameCard figcaption:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(253, 103, 103);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  content: "";
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.gameCard figcaption:before {
+  -webkit-transform: skew(30deg) translateX(-100%);
+  transform: skew(30deg) translateX(-100%);
+}
+
+.gameCard figcaption:after {
+  -webkit-transform: skew(-30deg) translateX(-90%);
+  transform: skew(-30deg) translateX(-90%);
+}
+
+.gameCard h3,
+.gameCard p {
+  margin: 0;
+  opacity: 0;
+  letter-spacing: 1px;
+}
+
+.gameCard h3 {
+  font-family: "Teko", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.gameCard p {
+  font-size: 0.9em;
+}
+
+.gameCard a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.gameCard:hover h3,
+.gameCard.hover h3,
+.gameCard:hover p,
+.gameCard.hover p {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 0.9;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.gameCard:hover:before,
+.gameCard.hover:before {
+  -webkit-transform: skew(30deg) translateX(-20%);
+  transform: skew(30deg) translateX(-20%);
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}
+
+.gameCard:hover:after,
+.gameCard.hover:after {
+  -webkit-transform: skew(-30deg) translateX(-10%);
+  transform: skew(-30deg) translateX(-10%);
+}
+
+.gameCard:hover figcaption:before,
+.gameCard.hover figcaption:before {
+  -webkit-transform: skew(30deg) translateX(-40%);
+  transform: skew(30deg) translateX(-40%);
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+
+.gameCard:hover figcaption:after,
+.gameCard.hover figcaption:after {
+  -webkit-transform: skew(-30deg) translateX(-30%);
+  transform: skew(-30deg) translateX(-30%);
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+// }

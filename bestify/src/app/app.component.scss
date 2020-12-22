@@ -1,0 +1,35 @@
+// .chart-container {
+//   width: 100%;
+//   .chart1 {
+//     display: flex;
+//     width: 100%;
+//     .line {
+//       flex: 1;
+//     }
+//     .pie {
+//       flex: 1;
+//     }
+//   }
+//   .chart2 {
+//     display: flex;
+//     width: 100%;
+//     .table {
+//       flex: 1;
+//     }
+//   }
+// }
+
+html {
+  scroll-behavior: smooth;
+}
+app-main {
+  background: black;
+}
+
+app-main1,
+app-main2 {
+  background: black;
+}
+.admin-class {
+  display: none;
+}

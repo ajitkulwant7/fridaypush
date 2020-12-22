@@ -1,0 +1,246 @@
+<div class="main-dash">
+  <div class="cardscontainer">
+    <br />
+    <h2>DashBoard</h2>
+    <div class="buttonsforNav">
+      <button mat-fab color="accent" (click)="gotoSection('quizSection')">
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </button>
+    </div>
+    <br />
+    <div
+      id="dashBoardSection"
+      class="cards"
+      fxLayout="row"
+      fxLayout.xs="column"
+      fxLayoutWarp
+      fxLayoutGap="0.5%"
+      fxLayoutAlign="center"
+    >
+      <div class="card1">
+        <mat-card>
+          <mat-card-title>Popular Game</mat-card-title>
+          <mat-card-header>% Users played the Games</mat-card-header>
+          <mat-card-content>
+            <google-chart
+              [title]="pietitle"
+              [type]="pie"
+              [data]="piedata"
+              [options]="pieoptions"
+              [columns]="piecolumns"
+            ></google-chart>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      &nbsp;&nbsp;
+      <div class="card1">
+        <mat-card>
+          <mat-card-title>Popular Quiz</mat-card-title>
+          <mat-card-header>% Users played the Quiz</mat-card-header>
+          <mat-card-content>
+            <google-chart
+              [title]="columntitle"
+              [type]="column"
+              [data]="columndata"
+              [options]="columnoptions"
+              [columns]="columncolumns"
+            ></google-chart>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+    <br /><br />
+  </div>
+  <br />
+  <div
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxLayoutWarp
+    fxLayoutGap="5%"
+    fxLayoutAlign="space-around"
+  >
+    <div class="gametable">
+      <h3>Users with HighScore in game</h3>
+
+      <mat-form-field>
+        <mat-label>Filter</mat-label>
+        <input
+          matInput
+          (keyup)="applyFilter1($event)"
+          placeholder="Ex. Mia"
+          #input
+        />
+      </mat-form-field>
+
+      <table
+        mat-table
+        [dataSource]="dataSource1"
+        matSort
+        class="mat-elevation-z8"
+      >
+        <!-- Position Column -->
+        <ng-container matColumnDef="username">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Username</th>
+          <td mat-cell *matCellDef="let element">{{ element.username }}</td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="maxscore">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Score</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.maxscore }}
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+    </div>
+    <div class="quiztable">
+      <h3>Users with HighScore in quiz</h3>
+
+      <mat-form-field>
+        <mat-label>Filter</mat-label>
+        <input
+          matInput
+          (keyup)="applyFilter2($event)"
+          placeholder="Ex. Mia"
+          #input
+        />
+      </mat-form-field>
+
+      <table
+        mat-table
+        [dataSource]="dataSource2"
+        matSort
+        class="mat-elevation-z8"
+      >
+        <!-- Position Column -->
+        <ng-container matColumnDef="username">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Username</th>
+          <td mat-cell *matCellDef="let element">{{ element.username }}</td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="maxscore">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Score</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.maxscore }}
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+    </div>
+  </div>
+  <br />
+  <div class="buttonsforNav">
+    <button mat-fab color="primary" (click)="gotoSection('dashBoardSection')">
+      <mat-icon>keyboard_arrow_up</mat-icon>
+    </button>
+  </div>
+  <div class="quizSection" id="quizSection">
+    <div class="addQuiz">
+      <mat-card>
+        <mat-card-title>Add Quiz</mat-card-title><br />
+        <form [formGroup]="quizform" (ngSubmit)="submitQuiz()">
+          Quiz Name:
+
+          <input
+            type="text"
+            id="quizname"
+            name="quizname"
+            formControlName="quizname"
+            title="cannot be empty"
+            required
+          />
+
+          <br />
+          <br />
+          Quiz Category:
+          <select
+            name="quizcategory"
+            id="quizcategory"
+            formControlName="quizcategory"
+            required
+          >
+            <option value="gk">gk</option>
+            <option value="brainteasers">brainteasers</option>
+          </select>
+
+          <br />
+          <br />
+          <!-- <button (click)="submitQuiz()">Next</button> -->
+
+          <input type="submit" value="Next" />
+          <br />
+          <br />
+        </form>
+
+        <div *ngIf="QueTab">
+          Select Type of Quetion:
+          <select name="quetype" id="" [(ngModel)]="isMCQ">
+            <option [ngValue]="true">mcq</option>
+            <option [ngValue]="false">descriptive</option></select
+          ><br />
+          <br />
+          <form [formGroup]="questionform">
+            Enter Question:
+            <input
+              type="text"
+              formControlName="questionstatement"
+            /><br /><br />
+            <div *ngIf="isMCQ">
+              Enter Options: <br />
+              1.<input type="text" formControlName="option1" /><br />
+              <br />
+              2.<input type="text" formControlName="option2" /><br />
+              <br />
+              3.<input type="text" formControlName="option3" /><br />
+              <br />
+              4.<input type="text" formControlName="option4" /><br />
+              <br />
+            </div>
+            <div>Answer:<input type="text" formControlName="answer" /></div>
+            <br />
+            <button (click)="submitQuetions()" >Submit</button>
+          </form>
+        </div>
+      </mat-card>
+    </div>
+
+    <div class="deleteQuiz">
+      <mat-card>
+        <mat-card-title>Delete Quiz</mat-card-title>
+
+      
+      
+      
+      <table class="deleteQuizTab">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>QuizName</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let quiz of quizarray">
+            <td>{{ quiz.id }}</td>
+            <td>{{ quiz.quizname }}</td>
+            <td><button (click)="deleteQuiz(quiz.id)">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      
+      </mat-card
+      >
+    </div>
+  </div>
+</div>

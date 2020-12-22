@@ -1,0 +1,121 @@
+body{
+    margin: 0;
+    padding:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:black;
+    font-family: sans-serif;
+    overflow: hidden;
+
+}
+a{
+    color: white;
+}
+.container{
+    overflow-y: hidden;
+    position: relative;
+    width: 90%;
+    left:25%;
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+    grid-template-rows:auto;
+    grid-gap:0 40px;
+}
+.box{
+    position: relative;
+    height: 600px;
+    width:500px;
+    background-color:#00001a ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #0d0d0d;
+}
+
+.container .box:before{
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -2px;
+    right: -2px;
+    bottom: -1px;
+    background-color:white ;
+    transform: skew(2deg,2deg);
+    z-index:-1;
+}
+
+.container .box:nth-child(1):before{
+    background:linear-gradient(315deg,#7700b3,#66d9ff);
+}
+
+.content{
+    position: relative;
+    padding:20px;
+}
+.content h2{
+    position: absolute;
+    top: -100;
+    right: 20px;
+    margin: 0;
+    padding:0;
+    font-size: 10em; 
+    color:#595959;
+    opacity: 0.3;
+    transition: 0.5s;
+}
+.box:hover .content h2{
+    top: -140px;
+}
+.content h1{
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 30px;
+    font-weight: 500;
+    color: yellow;
+    margin-left: 35%;
+}
+.content h3{
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 25px;
+    color:crimson;
+    margin-left: 20%;
+}
+.content p{
+    margin: 0;
+    padding: 0;
+    font-size:15px;
+    color: white; 
+}
+.content a{
+    position: relative;
+    margin: 20px 0 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border:1px solid grey;
+    display: inline-block;
+    color: white;
+    transition: 0.5s;
+    transform: translateY(-40px);
+    opacity: 0;
+    visibility: hidden;
+}
+.box:hover a{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+
+}
+.box a:hover{
+    color: black;
+    background-color: white;
+}
+img{
+    position: relative;
+    left:20px;
+    height: 300px;
+    width: 400px;
+}
+

@@ -1,0 +1,29 @@
+<app-herosection
+  (myevent)="updateScroll($event)"
+  *ngIf="!gamestarted"
+  [ngClass]="{ 'hide-class': quizpage }"
+  [ngClass]="{ 'hide-class': contactUs }"
+></app-herosection>
+
+<div id="quiz" [ngClass]="{ 'hide-class': contactUs }">
+  <app-quizsection
+    *ngIf="!gamestarted"
+    [ngClass]="{ 'hide-class': quizpage }"
+    (notify)="hideComponent($event)"
+  ></app-quizsection>
+</div>
+
+<div id="game" [ngClass]="{ 'hide-class': contactUs }">
+  <app-gamesection
+    (isgamestart)="gamestatus($event)"
+    *ngIf="!gamestarted"
+    [ngClass]="{ 'hide-class': quizpage }"
+  ></app-gamesection>
+</div>
+<app-highscore
+  *ngIf="isLogin"
+  [ngClass]="{ 'hide-class': contactUs }"
+  [ngClass]="{ 'hide-class': quizpage }"
+  [ngClass]="{ 'hide-class': gamestarted }"
+></app-highscore>
+<router-outlet></router-outlet>

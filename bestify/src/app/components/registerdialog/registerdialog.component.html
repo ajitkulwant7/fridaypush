@@ -1,0 +1,153 @@
+<br />
+<div class="registerform">
+  <h1 mat-dialog-title>Register</h1>
+  <form
+    [formGroup]="registrationForm"
+    (ngSubmit)="saveRegistration(registrationForm.value); onSubmit()"
+  >
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>Enter Username</mat-label>
+        <input
+          type="text"
+          formControlName="username"
+          matInput
+          name="username"
+          pattern="^[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)*$"
+        />
+
+        <mat-hint
+          class="mat"
+          *ngIf="
+            saveRegistrationFormControl.username.touched &&
+            saveRegistrationFormControl.username.errors?.invalidUsername
+          "
+          >Dont use special characters</mat-hint
+        >
+
+        <span
+          class="text-danger"
+          *ngIf="
+            (saveRegistrationFormControl.username.touched || submitted) &&
+            saveRegistrationFormControl.username.errors?.required
+          "
+        >
+          Username is required
+        </span>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>Enter Password</mat-label>
+        <input
+          type="password"
+          formControlName="password"
+          matInput
+          name="password"
+          placeholder="User#1234"
+        />
+
+        <mat-hint
+          class="mat"
+          *ngIf="
+            saveRegistrationFormControl.password.touched &&
+            saveRegistrationFormControl.password.errors?.invalidPassword
+          "
+          >Min 8 char,min 1 Ucase & Lcase & 1 num/special char</mat-hint
+        >
+        <span
+          class="text-danger"
+          *ngIf="
+            (saveRegistrationFormControl.password.touched || submitted) &&
+            saveRegistrationFormControl.password.errors?.required
+          "
+        >
+          Password is required
+        </span>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>Confirm Password</mat-label>
+        <input
+          type="password"
+          formControlName="confirmPassword"
+          matInput
+          name="confirmPassword"
+          placeholder="user#1234"
+        />
+        <mat-hint
+          class="mat"
+          *ngIf="
+            saveRegistrationFormControl.confirmPassword.touched &&
+            saveRegistrationFormControl.confirmPassword.errors?.passwordMismatch
+          "
+        >
+          Passwords doesnot match</mat-hint
+        >
+        <span
+          class="text-danger"
+          *ngIf="
+            (saveRegistrationFormControl.confirmPassword.touched ||
+              submitted) &&
+            saveRegistrationFormControl.confirmPassword.errors?.required
+          "
+        >
+          Password is required
+        </span>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>Enter Email</mat-label>
+        <input
+          type="email"
+          formControlName="email"
+          matInput
+          name="email"
+          placeholder="user@gmail.com"
+        />
+
+        <mat-hint
+          class="mat"
+          *ngIf="
+            saveRegistrationFormControl.email.touched &&
+            saveRegistrationFormControl.email.errors?.email
+          "
+          >Should be valid email</mat-hint
+        >
+        <span
+          class="text-danger"
+          *ngIf="
+            (saveRegistrationFormControl.email.touched || submitted) &&
+            saveRegistrationFormControl.email.errors?.required
+          "
+        >
+          Email is required
+        </span>
+      </mat-form-field>
+    </p>
+
+    <div mat-dialog-actions>
+      <button
+        type="submit"
+        mat-raised-button
+        color="primary"
+        [disabled]="!registrationForm.valid"
+      >
+        Register
+      </button>
+      &nbsp; &nbsp;
+      <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    </div>
+  </form>
+  <div class="success" *ngIf="isSuccessful">
+    Your registration is successful!
+  </div>
+  <div class="Error" *ngIf="isSignUpFailed">
+    Plz Enter Unique Username & Email
+  </div>
+</div>
+<br />

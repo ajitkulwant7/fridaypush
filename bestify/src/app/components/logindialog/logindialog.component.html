@@ -1,0 +1,48 @@
+<div>
+  <div class="loginform">
+    <h1 mat-dialog-title>Login</h1>
+    <form [formGroup]="myform" (ngSubmit)="loginProcess()">  
+    <p>
+ 
+       <mat-form-field appearance="outline" >
+        <mat-label>Enter Username</mat-label>
+        <input type="text" matInput placeholder="username_123" formControlName="username" required/>
+        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+        <mat-hint>Username must contain more than 6 characters</mat-hint>
+       
+      </mat-form-field>
+    </p>
+    <br>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter Password</mat-label>
+        <input type="password" matInput placeholder="password@134" formControlName="password" required/>
+        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+        
+        <mat-hint>Should be valid password</mat-hint>
+
+      </mat-form-field>
+    </p>
+
+    <!-- <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter Email</mat-label>
+        <input matInput placeholder="email@gmail.com" formControlName="email" required/> -->
+        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+        <!-- <mat-hint>Should be valid email</mat-hint>
+     
+      </mat-form-field>
+    </p> -->
+    <div class="Error" *ngIf="isValidate">
+      *****Incorrect Credentials*****
+    </div>
+
+    <div mat-dialog-actions>
+      <button mat-raised-button color="primary" >Login</button>
+      <!-- <button mat-raised-button color="primary" (click)="gotoAdmin()">Login</button> -->
+      &nbsp; &nbsp;
+      <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+   </div>
+  </form>
+  </div>
+</div>

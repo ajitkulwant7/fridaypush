@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+h1{
+    text-align: center;
+    color: crimson;
+}
+img{
+    margin-left: 25%;
+    height: 250px;
+    width: 250px;
+}
+.msg{
+    font-family: 'Langar', cursive;
+    font-size: 40px;
+    text-shadow: 0 0 3px #FF0000;
+}
+span.correct{
+    color: green;
+    margin-left: 75%;
+    font-size: 20px;
+    position: relative;
+}
+span.incorrect{
+    color: red;
+    margin-left: 75%;
+    font-size: 20px;
+    position: relative;
+}
+.answer{
+    margin-left: 50px;
+}
+.container{
+    margin: auto;
+}
+span i{
+    color: black;
+    font-size: 30px;
+}

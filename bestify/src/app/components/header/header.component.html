@@ -1,0 +1,91 @@
+<p>
+  <mat-toolbar color="primary">
+    <button
+    (click)="toHome()"
+      matTooltip="bestify ur time"
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>extension</mat-icon>
+    </button>
+    <span (click)="toHome()">BestifyUrTime</span>
+    <span class="example-spacer"></span>
+    <button
+      *ngIf="!isLogin"
+      [ngClass]="{ 'my-class': adminLoggedIn }"
+      matTooltip="login"
+      matTooltipClass="login-tooltip"
+      (click)="openLoginDialog()"
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>login</mat-icon>
+    </button>
+
+    <button
+      *ngIf="isLogin || adminLoggedIn"
+      matTooltip="logout"
+      matTooltipClass="logout-tooltip"
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+      (click)="logout()"
+    >
+      <mat-icon>logout</mat-icon>
+    </button>
+    <button
+      *ngIf="!isLogin"
+      [ngClass]="{ 'my-class': adminLoggedIn }"
+      matTooltip="register"
+      matTooltipClass="register-tooltip"
+      (click)="openRegisterDialog()"
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>add_circle</mat-icon>
+    </button>
+
+    <!-- <button
+      *ngIf="isLogin"
+      matTooltip="your profile"
+      mat-icon-button
+      color="accent"
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      Your Profile
+    </button> -->
+    <button
+      *ngIf="isLogin"
+      [ngClass]="{ 'my-class': adminLoggedIn }"
+      mat-raised-button
+      color="accent"
+      (click)="goToProfile()"
+    >
+      Profile
+    </button>
+
+    <button
+      matTooltip="change theme"
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+      (click)="themechange()"
+    >
+      <mat-icon>{{ theme }}</mat-icon>
+    </button>
+
+    <button (click)="toContactUs()"
+    *ngIf="!isLogin"
+      matTooltip="contact us"
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>contact_support</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>

@@ -1,0 +1,14 @@
+<div class="gameScreen">
+  <div class="loader" [hidden]="!showLoader">
+    <div class="message">
+      <i class="fas fa-spinner fa-spin"></i>
+      <h2>Loading</h2>
+    </div>
+  </div>
+  <canvas #canvas class="play-ground"></canvas>
+</div>
+<div class="scoreBoard">
+  <h4>score:{{ score }}</h4>
+</div>
+<button mat-raised-button color="accent" (click)="backToHome()">BACK</button>
+<button mat-raised-button color="warm" (click)="submit()">Mail your score</button>
